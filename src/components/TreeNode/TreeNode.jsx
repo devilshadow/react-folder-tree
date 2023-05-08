@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import React, {
   useContext,
   useState,
@@ -12,7 +13,7 @@ import {
   AiOutlineClose,
   AiOutlineDelete,
   AiOutlineEdit,
-  AiOutlineFileAdd,
+  // AiOutlineFileAdd,
   AiOutlineFolderAdd,
   AiOutlineCheck,
 } from 'react-icons/ai';
@@ -68,7 +69,7 @@ const TreeNode = ({
     EditIcon = getDefaultIcon(AiOutlineEdit),
     DeleteIcon = getDefaultIcon(AiOutlineDelete),
     CancelIcon = getDefaultIcon(AiOutlineClose),
-    AddFileIcon = getDefaultIcon(AiOutlineFileAdd),
+    // AddFileIcon = getDefaultIcon(AiOutlineFileAdd),
     AddFolderIcon = getDefaultIcon(AiOutlineFolderAdd),
     CaretRightIcon = getDefaultIcon(AiFillCaretRight),
     CaretDownIcon = getDefaultIcon(AiFillCaretDown),
@@ -109,7 +110,7 @@ const TreeNode = ({
 
   const deleteMe = () => handleDelete(path);
 
-  const addFile = () => handleAddNode(path, false);
+  // const addFile = () => handleAddNode(path, false);
   const addFolder = () => handleAddNode(path, true);
 
   const handleNameClick = () => {
@@ -136,11 +137,6 @@ const TreeNode = ({
       {
         isFolder && (
           <>
-            <AddFileIcon
-              className={ iconClassName('AddFileIcon') }
-              onClick={ addFile }
-              nodeData={ nodeData }
-            />
             <AddFolderIcon
               className={ iconClassName('AddFolderIcon') }
               onClick={ addFolder }
